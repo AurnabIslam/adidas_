@@ -7,9 +7,9 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- font awesome -->
-    
+
     <!-- GoogleFonts -->
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
     <!-- GoogleFonts -->
 
     <link rel="stylesheet" href="css/bulma.css">
@@ -25,7 +25,8 @@
     <section class="hero has-background-grey-light is-mobile">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head is-mobile">
-            <header class="navbar">
+
+            <header class="navbar is-fixed-top has-background-grey-light">
                 <div class="container">
                     <div class="navbar-brand">
                         <a href="index.html" class="navbar-item">
@@ -49,20 +50,15 @@
                             <a class="navbar-item">
                                 Store
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" id="cart_btn">
                                 <span class="icon">
                                     <i class="fa">&#xf07a;</i>
                                 </span>
-                                <span>Cart</span>
+                                <span>
+                                    Cart
+                                    <span id="cartcount"></span>
+                                </span>
                             </a>
-                            <!-- <span class="navbar-item">
-                                <a class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-cart"></i>
-                                    </span>
-                                    <span>Download</span>
-                                </a>
-                            </span> -->
                         </div>
                     </div>
                 </div>
@@ -71,16 +67,38 @@
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body is-mobile" id="body_display_area">
-            <div class="container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1505874462322-dfcf87f819a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <div class="container"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/2ec558abcbdb43208b2eab0901285707_9366/NMD_R1_Shoes_Red_FV9017_01_standard.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                    
                 <div class="container has-text-centered" style="width: auto;height: 700px;padding-top: 300px;">
+                    <div class="bybutton">
+                        <a href="#" class="myButton">Buy Now</a>
+                    </div>
                     <h1 style="color:white; font-size:3rem;font-weight: bold;padding-right: 125px;">Stay Cool</h1>
                     <h1 style="color:white; font-size:3rem;font-weight: bold;padding-left: 125px;">Train Hard</h1>
                 </div>
             </div>
         </div>
-            <!-- Hero footer: will stick at the bottom -->
+        <!-- Hero footer: will stick at the bottom -->
 
     </section>
+    <div class="modal" id="cart_modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Your Cart</p>
+                <button class="delete" aria-label="close" id="modal_close_2"></button>
+            </header>
+            <section class="modal-card-body" id="modal_card_body">
+                Your Cart is empty!
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Buy</button>
+                <button class="button is-primary" onclick="clear_cart()">Clear Cart</button>
+                <button class="button" id="modal_close">Go Back</button>
+            </footer>
+        </div>
+    </div>
     <footer class="has-background-grey-light">
         <div class="hero-foot is-mobile">
             <nav class="tabs is-boxed is-fullwidth">

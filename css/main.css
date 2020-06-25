@@ -19,6 +19,54 @@ footer{
 a,h1{
     font-family: var(--ff-adidas);
 }
+.myButton {
+
+    position: relative;
+
+    top : 16em;
+    box-shadow: 5px 7px 0px 0px #000000;
+	background-color:#5c0909;
+	border-radius:1px;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	
+	font-size:18px;
+	padding:8px 42px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+    background-color: white;
+   
+    
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.box button{
+    display: none;
+}
+.box:hover figure{
+    margin-bottom: 10px;
+}
+.box:hover button{
+    text-align: center;
+    border-radius: 17px;
+    background-color: grey;
+    color: salmon;
+    font-family: var(--ff-adidas);
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.3rem;
+    display: block;
+
+
 /*
     Colors 
     https://bulma.io/documentation/helpers/color-helpers/ 
